@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
@@ -27,6 +28,24 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+}
+
+def getVersionName = { ->
+    return "0.2.3"
+}
+def getArtifactId = { ->
+    return "scrollable-picker-dialog"
+}
+
+publishing {
+    publications {
+        bar(MavenPublication) {
+            groupId 'com.hackino.scrollablepicker'
+            artifactId getArtifactId()
+            version getVersionName()
+            artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar")
+        }
     }
 }
 
