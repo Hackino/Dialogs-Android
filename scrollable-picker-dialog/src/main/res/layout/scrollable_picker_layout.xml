@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollable_picker_viewgroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/scrollable_picker_cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        tools:text="@string/cancel"
+        android:textStyle="normal"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@android:color/transparent"
+        app:layout_constraintBaseline_toBaselineOf="@id/scrollable_picker_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/scrollable_picker_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textAlignment="center"
+        tools:text = "Title"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/scrollable_picker_confirm_btn"
+        android:textColor="@android:color/background_dark"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/scrollable_picker_confirm_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        tools:text="@string/done"
+        android:textStyle="normal"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <NumberPicker
+        android:id="@+id/scrollable_picker_scroller"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollable_picker_title"
+        android:layout_marginTop="30dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
