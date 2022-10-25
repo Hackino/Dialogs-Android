@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Normal dialog
-       val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+       val builder:AlertDialog.Builder = AlertDialog.Builder(this)
             builder.apply {
                 setPositiveButton("ok"){_,_->}
                 setNegativeButton("cancel"){_,_->}
