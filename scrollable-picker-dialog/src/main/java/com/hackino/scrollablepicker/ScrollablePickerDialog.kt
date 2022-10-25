@@ -1,4 +1,4 @@
-package com.example.scrollablepicker
+package com.hackino.scrollablepicker
 
 import android.content.Context
 import android.view.View
